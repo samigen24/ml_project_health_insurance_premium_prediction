@@ -1,2 +1,5 @@
 [general]
+[server]
+headless = true
+runOnSave = true
 pythonVersion = "3.10"
