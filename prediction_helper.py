@@ -3,11 +3,11 @@ from joblib import load
 
 
 
-model_rest = load('artifacts_\model_rest.joblib')
-model_young = load('artifacts_\model_young.joblib')
+model_rest = load('artifacts_/model_rest.joblib')
+model_young = load('artifacts_/model_young.joblib')
 
-scaler_rest = load('artifacts_\scaler_rest.joblib')
-scaler_young = load('artifacts_\scaler_young.joblib')
+scaler_rest = load('artifacts_/scaler_rest.joblib')
+scaler_young = load('artifacts_/scaler_young.joblib')
 
 
 def calculate_normalized_risk_score(medical_history):
