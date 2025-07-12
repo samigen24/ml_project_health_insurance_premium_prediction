@@ -1,4 +1,6 @@
 import streamlit as st
+import os
+os.system('pip install joblib')
 from prediction_helper import predict
 
 # Define categorical values
