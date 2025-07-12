@@ -42,23 +42,21 @@ with gr.Blocks() as demo:
     with gr.Row():
         with gr.Column():
             age = gr.Number(label="Age", value=30)
-            dependants = gr.Number(label="Number of Dependants", value=0)
-            income = gr.Number(label="Income (in Lakhs)", value=5.0)
-
-        with gr.Column():
             risk = gr.Number(label="Genetical Risk", value=0.5)
-            plan = gr.Dropdown(categorical_options['insurance_plan'], label="Insurance Plan")
-            emp_status = gr.Dropdown(categorical_options['employment_status'], label="Employment Status")
+            gender = gr.Dropdown(categorical_options['gender'], label="Gender")
+            smoking = gr.Dropdown(categorical_options['smoking_status'], label="Smoking Status")
 
         with gr.Column():
-            gender = gr.Dropdown(categorical_options['gender'], label="Gender")
+            dependants = gr.Number(label="Number of Dependants", value=0)
+            plan = gr.Dropdown(categorical_options['insurance_plan'], label="Insurance Plan")
             marital = gr.Dropdown(categorical_options['marital_status'], label="Marital Status")
-            bmi = gr.Dropdown(categorical_options['bmi_category'], label="BMI Category")
+            region = gr.Dropdown(categorical_options['region'], label="Region")
 
-    with gr.Row():
-        smoking = gr.Dropdown(categorical_options['smoking_status'], label="Smoking Status")
-        region = gr.Dropdown(categorical_options['region'], label="Region")
-        medical = gr.Dropdown(categorical_options['medical_history'], label="Medical History")
+        with gr.Column():
+            income = gr.Number(label="Income (in Lakhs)", value=5.0)
+            emp_status = gr.Dropdown(categorical_options['employment_status'], label="Employment Status")
+            bmi = gr.Dropdown(categorical_options['bmi_category'], label="BMI Category")
+            medical = gr.Dropdown(categorical_options['medical_history'], label="Medical History")
 
     output = gr.Textbox(label="Prediction Result")
     submit_btn = gr.Button("Predict")
